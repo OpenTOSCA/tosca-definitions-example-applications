@@ -1,6 +1,10 @@
-# TOSCA Definitions Example Applications Repository [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# RealWorld-Application [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-> Example applications modeled in TOSCA which can be provisioned using a standard-compliant engine, such as the [OpenTOSCA Container](http://opentosca.github.io/container).
+> This node type installs, configures, and starts the (Angular) frontend of the RealWorldApplication.
+
+## Properties
+
+- `AppName`
 
 ## Haftungsausschluss
 

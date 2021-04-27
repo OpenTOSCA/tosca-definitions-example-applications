@@ -1,6 +1,18 @@
-# TOSCA Definitions Example Applications Repository [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# MyTinyToDo_MySql OpenStack [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-> Example applications modeled in TOSCA which can be provisioned using a standard-compliant engine, such as the [OpenTOSCA Container](http://opentosca.github.io/container).
+> Installs the PHP Application MyTinyToDo as a Docker Container which uses a MySQL database hosted on an Ubuntu Docker Container.
+
+## Properties
+
+None.
+
+## Required Inputs
+
+- `dockerUrl`. The URL of the Docker Engine, e.g., in the docker-compose setup use your IP address and the port 2222 as
+  follows: `tcp://192.168.0.20:2222`.
+- `DBUser`. Username to be set in the MySQL Database.
+- `DBPassword`. Password to the MySQL Database.
+- `DBMSPassword`. Password to be set for the MySQL DBMS.
 
 ## Haftungsausschluss
 

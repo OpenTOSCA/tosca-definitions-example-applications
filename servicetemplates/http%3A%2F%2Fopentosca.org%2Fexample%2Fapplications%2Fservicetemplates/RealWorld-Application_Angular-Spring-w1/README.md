@@ -1,6 +1,13 @@
-# TOSCA Definitions Example Applications Repository [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# RealWorldApplication (Angular/Spring) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-> Example applications modeled in TOSCA which can be provisioned using a standard-compliant engine, such as the [OpenTOSCA Container](http://opentosca.github.io/container).
+> Installs the RealWorldApplication as a Docker Container on a locally installed DockerEngine.
+
+## Properties
+
+- `DockerUrl`: Specifies the DockerEngine TCP Socket (i.e., `tcp://192.168.13.37:2222` in
+  the [Docker Compose environment](https://github.com/OpenTOSCA/opentosca-docker))
+- `BackendPort`: Specifies the port for the (Spring) backend of the RealWorldApplication
+- `FrontendPort`: Specifies the port for the (Angular) frontent running under Nginx of the RealWorldApplication
 
 ## Haftungsausschluss
 
