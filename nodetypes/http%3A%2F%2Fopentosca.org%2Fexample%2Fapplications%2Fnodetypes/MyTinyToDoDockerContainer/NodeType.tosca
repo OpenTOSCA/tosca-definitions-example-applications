@@ -2,12 +2,9 @@
 <Definitions targetNamespace="http://opentosca.org/example/applications/nodetypes"
              id="winery-defs-for_nodetypes-MyTinyToDoDockerContainer"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
-             xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"
->
+             xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12">
     <NodeType name="MyTinyToDoDockerContainer" abstract="no" final="no"
               targetNamespace="http://opentosca.org/example/applications/nodetypes" winery:bordercolor="#633a6f">
-        <DerivedFrom typeRef="nodetypes:DockerContainer"
-                     xmlns:nodetypes="http://opentosca.org/nodetypes"/>
         <winery:PropertiesDefinition elementname="Properties"
                                      namespace="http://opentosca.org/example/applications/nodetypes/propertiesdefinition/winery">
             <winery:properties>
@@ -19,15 +16,16 @@
                 <winery:type>xsd:string</winery:type>
             </winery:properties>
         </winery:PropertiesDefinition>
+        <DerivedFrom typeRef="nodetypes:DockerContainer_w1" xmlns:nodetypes="http://opentosca.org/nodetypes"/>
         <Interfaces>
             <Interface name="http://opentosca.org/interfaces/connections">
                 <Operation name="connectTo">
                     <InputParameters>
-                        <InputParameter name="VMIP" type="xsd:String" required="false"/>
-                        <InputParameter name="DBName" type="xsd:String" required="false"/>
-                        <InputParameter name="DBMSPort" type="xsd" required="false"/>
-                        <InputParameter name="DBUser" type="xsd:String" required="false"/>
-                        <InputParameter name="DBPassword" type="xsd:String" required="false"/>
+                        <InputParameter name="VMIP" type="xsd:String" required="yes"/>
+                        <InputParameter name="DBName" type="xsd:String" required="yes"/>
+                        <InputParameter name="DBMSPort" type="xsd" required="yes"/>
+                        <InputParameter name="DBUser" type="xsd:String" required="yes"/>
+                        <InputParameter name="DBPassword" type="xsd:String" required="yes"/>
                     </InputParameters>
                 </Operation>
             </Interface>

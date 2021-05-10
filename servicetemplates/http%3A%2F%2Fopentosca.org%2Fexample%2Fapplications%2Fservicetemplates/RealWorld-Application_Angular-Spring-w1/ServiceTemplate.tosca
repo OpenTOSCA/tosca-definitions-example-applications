@@ -8,9 +8,9 @@
                      targetNamespace="http://opentosca.org/example/applications/servicetemplates"
                      id="RealWorld-Application_Angular-Spring-w1">
         <TopologyTemplate>
-            <NodeTemplate name="DockerEngine" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine"
+            <NodeTemplate name="DockerEngine" minInstances="1" maxInstances="1" type="nodeTypes:DockerEngine_w1"
                           id="DockerEngine" winery:x="344" winery:y="626"
-                          xmlns:otntyIgeneral="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:DockerEngineURL>get_input: DockerUrl</ex:DockerEngineURL>
@@ -18,7 +18,7 @@
                     </ex:Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer"
+            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer_w1"
                           id="DockerContainer" winery:x="548" winery:y="491"
                           xmlns:nodetypes="http://opentosca.org/nodetypes">
                 <Properties>
@@ -51,7 +51,7 @@
                                         xmlns:artifacttypes="http://opentosca.org/artifacttypes"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer"
+            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer_w1"
                           id="DockerContainer_2" winery:x="133" winery:y="491"
                           xmlns:nodetypes="http://opentosca.org/nodetypes">
                 <Properties>
@@ -71,7 +71,7 @@
                           xmlns:nodetypes="http://opentosca.org/nodetypes"/>
             <NodeTemplate name="RealWorld-Application_Angular-w1" minInstances="1" maxInstances="1"
                           type="exampleNodeTypes:RealWorld-Application_Angular-w1" id="RealWorld-Application_Angular-w1"
-                          winery:x="133" winery:y="124" xmlns:exampleNodeTypes="http://opentosca.org/nodetypes">
+                          winery:x="133" winery:y="124" xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:AppName>RealWorldApplication-Angular</ex:AppName>
