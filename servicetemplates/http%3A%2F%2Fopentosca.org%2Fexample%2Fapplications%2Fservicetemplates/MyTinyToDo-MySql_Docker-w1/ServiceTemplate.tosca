@@ -25,7 +25,7 @@
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:ContainerPort>80</ex:ContainerPort>
-                        <ex:Port>9990</ex:Port>
+                        <ex:Port>get_input: UI_Port</ex:Port>
                         <ex:ContainerID/>
                         <ex:ContainerIP/>
                     </ex:Properties>
