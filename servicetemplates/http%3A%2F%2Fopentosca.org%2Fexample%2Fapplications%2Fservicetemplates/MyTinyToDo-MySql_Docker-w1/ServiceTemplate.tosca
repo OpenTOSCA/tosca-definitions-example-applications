@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/servicetemplates"
-             id="winery-defs-for_servicetemplates-MyTinyToDo-MySql_Docker-w1"
+             id="servicetemplates-MyTinyToDo-MySql_Docker-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
              xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"
 >

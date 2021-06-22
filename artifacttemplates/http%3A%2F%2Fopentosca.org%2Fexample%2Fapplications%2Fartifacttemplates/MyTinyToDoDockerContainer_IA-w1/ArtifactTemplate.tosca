@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/artifacttemplates"
-             id="winery-defs-for_artifacttemplates-MyTinyToDoDockerContainer_IA-w1"
+             id="artifacttemplates-MyTinyToDoDockerContainer_IA-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
 >
     <ArtifactTemplate type="ToscaBaseTypes:ScriptArtifact" id="MyTinyToDoDockerContainer_IA-w1"

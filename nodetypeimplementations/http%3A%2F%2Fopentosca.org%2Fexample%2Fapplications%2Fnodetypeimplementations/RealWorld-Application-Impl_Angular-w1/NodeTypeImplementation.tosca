@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
-             id="winery-defs-for_otntyiIgeneral-RealWorld-Application-Impl_Angular-w1"
+             id="otntyiIgeneral-RealWorld-Application-Impl_Angular-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
 >
     <NodeTypeImplementation targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
