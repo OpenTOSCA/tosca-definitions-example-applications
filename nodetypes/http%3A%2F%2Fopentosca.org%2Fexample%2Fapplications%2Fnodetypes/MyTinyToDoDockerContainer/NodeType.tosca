@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/nodetypes"
-             id="nodetypes-MyTinyToDoDockerContainer"
+             id="exampleNodeTypes-MyTinyToDoDockerContainer"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
              xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12">
     <NodeType name="MyTinyToDoDockerContainer" abstract="no" final="no"
@@ -16,7 +16,7 @@
                 <winery:type>xsd:string</winery:type>
             </winery:properties>
         </winery:PropertiesDefinition>
-        <DerivedFrom typeRef="nodetypes:DockerContainer_w1" xmlns:nodetypes="http://opentosca.org/nodetypes"/>
+        <DerivedFrom typeRef="nodeTypes:DockerContainer_w1" xmlns:nodeTypes="http://opentosca.org/nodetypes"/>
         <Interfaces>
             <Interface name="http://opentosca.org/interfaces/connections">
                 <Operation name="connectTo">

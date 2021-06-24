@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
-             id="nodetypeimplementations-MyTinyToDoDockerContainer_Impl"
+             id="exampleNodeTypeImplementations-MyTinyToDoDockerContainer_Impl"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
 >
     <NodeTypeImplementation targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
                             name="MyTinyToDoDockerContainer_Impl" abstract="no" final="no"
-                            nodeType="exampleNodetypes:MyTinyToDoDockerContainer"
-                            xmlns:exampleNodetypes="http://opentosca.org/example/applications/nodetypes">
+                            nodeType="exampleNodeTypes:MyTinyToDoDockerContainer"
+                            xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes">
         <ImplementationArtifacts>
             <ImplementationArtifact name="MyTinyToDoDockerContainer_ConnectTo_IA"
                                     interfaceName="http://opentosca.org/interfaces/connections"

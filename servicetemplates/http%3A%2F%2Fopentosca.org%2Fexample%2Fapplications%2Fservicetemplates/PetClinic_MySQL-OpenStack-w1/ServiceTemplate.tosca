@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/example/applications/servicetemplates" id="servicetemplates-PetClinic_MySQL-OpenStack-w1">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/example/applications/servicetemplates" id="serviceTemplates-PetClinic_MySQL-OpenStack-w1">
     <ServiceTemplate name="PetClinic_MySQL-OpenStack-w1" targetNamespace="http://opentosca.org/example/applications/servicetemplates" id="PetClinic_MySQL-OpenStack-w1">
         <BoundaryDefinitions/>
         <TopologyTemplate>
@@ -12,7 +12,7 @@
                     </Properties>
                 </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="schema" artifactType="otatyIgeneral:SQLArtifact" artifactRef="exampleArtifactTemplates:Petclinic_Schema-DA-w1"/>
+                    <DeploymentArtifact xmlns:artifactTypes="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="schema" artifactType="artifactTypes:SQLArtifact" artifactRef="exampleArtifactTemplates:Petclinic_Schema-DA-w1"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="otntyIgeneral:Tomcat_9-w1" id="Tomcat_9" winery:location="undefined" winery:x="552" winery:y="226">
@@ -29,7 +29,7 @@
                     </properties>
                 </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="shop" artifactType="otatyIgeneral:WAR" artifactRef="exampleArtifactTemplates:PetClinic_DA-w1"/>
+                    <DeploymentArtifact xmlns:artifactTypes="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="shop" artifactType="artifactTypes:WAR" artifactRef="exampleArtifactTemplates:PetClinic_DA-w1"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
             <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral:OpenStack_15-Train-w1" id="OpenStack" winery:x="553" winery:y="613">

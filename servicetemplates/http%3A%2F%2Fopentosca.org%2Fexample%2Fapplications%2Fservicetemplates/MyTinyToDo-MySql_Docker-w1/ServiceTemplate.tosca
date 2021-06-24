@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/servicetemplates"
-             id="servicetemplates-MyTinyToDo-MySql_Docker-w1"
+             id="serviceTemplates-MyTinyToDo-MySql_Docker-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
              xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"
 >
@@ -8,9 +8,9 @@
                      targetNamespace="http://opentosca.org/example/applications/servicetemplates"
                      id="MyTinyToDo-MySql_Docker-w1">
         <TopologyTemplate>
-            <NodeTemplate name="DockerEngine" minInstances="1" maxInstances="1" type="nodetypes:DockerEngine_w1"
+            <NodeTemplate name="DockerEngine" minInstances="1" maxInstances="1" type="nodeTypes:DockerEngine_w1"
                           id="DockerEngine" winery:location="undefined" winery:x="384" winery:y="528"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:DockerEngineURL>get_input: dockerUrl</ex:DockerEngineURL>
@@ -19,9 +19,9 @@
                 </Properties>
             </NodeTemplate>
             <NodeTemplate name="MyTinyToDoDockerContainer" minInstances="1" maxInstances="1"
-                          type="exampleNodetypes:MyTinyToDoDockerContainer" id="MyTinyToDoDockerContainer"
+                          type="exampleNodeTypes:MyTinyToDoDockerContainer" id="MyTinyToDoDockerContainer"
                           winery:location="undefined" winery:x="241" winery:y="134"
-                          xmlns:exampleNodetypes="http://opentosca.org/example/applications/nodetypes">
+                          xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:ContainerPort>80</ex:ContainerPort>
@@ -32,15 +32,15 @@
                 </Properties>
                 <DeploymentArtifacts>
                     <DeploymentArtifact name="MyTinyToDoDockerContainer_DA"
-                                        artifactType="artifacttypes:DockerContainerArtifact"
+                                        artifactType="artifactTypes:DockerContainerArtifact"
                                         artifactRef="exampleArtifactTemplates:MyTinyToDo_DA-w1"
                                         xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates"
-                                        xmlns:artifacttypes="http://opentosca.org/artifacttypes"/>
+                                        xmlns:artifactTypes="http://opentosca.org/artifacttypes"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="nodetypes:MySQL-DBMS_5.7-w1"
+            <NodeTemplate name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="nodeTypes:MySQL-DBMS_5.7-w1"
                           id="MySQL-DBMS_5.7-w1" winery:x="570" winery:y="271"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:DBMSUser>root</ex:DBMSUser>
@@ -49,9 +49,9 @@
                     </ex:Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate name="MySQL-DB" minInstances="1" maxInstances="1" type="nodetypes:MySQL-DB_w1" id="MySQL-DB"
+            <NodeTemplate name="MySQL-DB" minInstances="1" maxInstances="1" type="nodeTypes:MySQL-DB_w1" id="MySQL-DB"
                           winery:location="undefined" winery:x="569" winery:y="132"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:DBName>todo</ex:DBName>
@@ -60,21 +60,21 @@
                     </ex:Properties>
                 </Properties>
                 <Policies>
-                    <Policy name="statefulAnnotation" policyType="policytypes:StatefulComponent"
-                            xmlns:policytypes="http://opentosca.org/management/features/policytypes"/>
-                    <Policy name="freezable" policyType="policytypes:FreezableComponent"
-                            xmlns:policytypes="http://opentosca.org/management/features/policytypes"/>
+                    <Policy name="statefulAnnotation" policyType="featurePolicyTypes:StatefulComponent"
+                            xmlns:featurePolicyTypes="http://opentosca.org/management/features/policytypes"/>
+                    <Policy name="freezable" policyType="featurePolicyTypes:FreezableComponent"
+                            xmlns:featurePolicyTypes="http://opentosca.org/management/features/policytypes"/>
                 </Policies>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact name="MyTinyToDo_DB_DA" artifactType="artifacttypes:SQLArtifact"
+                    <DeploymentArtifact name="MyTinyToDo_DB_DA" artifactType="artifactTypes:SQLArtifact"
                                         artifactRef="exampleArtifactTemplates:MyTinyToDo_DB-DA-w1"
                                         xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates"
-                                        xmlns:artifacttypes="http://opentosca.org/artifacttypes"/>
+                                        xmlns:artifactTypes="http://opentosca.org/artifacttypes"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer_w1"
+            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodeTypes:DockerContainer_w1"
                           id="DockerContainer" winery:x="569" winery:y="401"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:Port>3306</ex:Port>

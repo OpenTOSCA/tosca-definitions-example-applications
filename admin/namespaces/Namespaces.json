@@ -25,5 +25,14 @@
     "secureCollection": false,
     "generatedNamespace": false,
     "patternCollection": false
+  },
+  "http://opentosca.org/example/applications/nodetypeimplementations": {
+    "namespace": "http://opentosca.org/example/applications/nodetypeimplementations",
+    "prefix": "exampleNodeTypeImplementations",
+    "readableName": "",
+    "upstreamRepository": "",
+    "secureCollection": false,
+    "generatedNamespace": false,
+    "patternCollection": false
   }
 }
