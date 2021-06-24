@@ -3,11 +3,8 @@
 > Simple Java web application connecting to a MySQL database.
 
 This Service Template demonstrates how the [PetClinic](https://github.com/spring-projects/spring-petclinic) application
-can be deployed using TOSCA and set up to connect to a MySQL database.
-
-## Properties
-
-None.
+can be deployed using TOSCA and set up to connect to a MySQL database. The application will be deployed on a Ubuntu
+VM that gets deployed on an OpenStack Instance.
 
 ## Haftungsausschluss
 
