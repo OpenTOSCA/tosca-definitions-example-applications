@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/servicetemplates"
-             id="winery-defs-for_serviceTemplates-RealWorld-Application_Angular-Spring-w1"
+             id="exampleServiceTemplates-RealWorld-Application_Angular-Spring-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
              xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12"
 >
@@ -18,9 +18,9 @@
                     </ex:Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer_w1"
+            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodeTypes:DockerContainer_w1"
                           id="DockerContainer" winery:x="548" winery:y="491"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:Port>get_input:BackendPort</ex:Port>
@@ -33,11 +33,11 @@
                     </ex:Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate name="Java_8" minInstances="1" maxInstances="1" type="nodetypes:Java_8-w1" id="Java8_2"
-                          winery:x="548" winery:y="342" xmlns:nodetypes="http://opentosca.org/nodetypes"/>
-            <NodeTemplate name="SpringWebApp_w1" minInstances="1" maxInstances="1" type="nodetypes:SpringWebApp_w1"
+            <NodeTemplate name="Java_8" minInstances="1" maxInstances="1" type="nodeTypes:Java_8-w1" id="Java8_2"
+                          winery:x="548" winery:y="342" xmlns:nodeTypes="http://opentosca.org/nodetypes"/>
+            <NodeTemplate name="SpringWebApp_w1" minInstances="1" maxInstances="1" type="nodeTypes:SpringWebApp_w1"
                           id="SpringWebApp_w1" winery:x="548" winery:y="124"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:AppName>RealWorldApplication-Spring</ex:AppName>
@@ -45,15 +45,15 @@
                     </ex:Properties>
                 </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact name="DA" artifactType="artifacttypes:JAR"
+                    <DeploymentArtifact name="DA" artifactType="artifactTypes:JAR"
                                         artifactRef="exampleArtifactTemplates:RealWorld-Application_Spring-Backend-DA-w1"
                                         xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates"
-                                        xmlns:artifacttypes="http://opentosca.org/artifacttypes"/>
+                                        xmlns:artifactTypes="http://opentosca.org/artifacttypes"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodetypes:DockerContainer_w1"
+            <NodeTemplate name="DockerContainer" minInstances="1" maxInstances="1" type="nodeTypes:DockerContainer_w1"
                           id="DockerContainer_2" winery:x="133" winery:y="491"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes">
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes">
                 <Properties>
                     <ex:Properties xmlns:ex="http://www.example.org">
                         <ex:Port>get_input:FrontendPort</ex:Port>
@@ -66,9 +66,9 @@
                     </ex:Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate name="NGINX_latest-w1" minInstances="1" maxInstances="1" type="nodetypes:NGINX_latest-w1"
+            <NodeTemplate name="NGINX_latest-w1" minInstances="1" maxInstances="1" type="nodeTypes:NGINX_latest-w1"
                           id="NGINX_latest-w1" winery:x="133" winery:y="342"
-                          xmlns:nodetypes="http://opentosca.org/nodetypes"/>
+                          xmlns:nodeTypes="http://opentosca.org/nodetypes"/>
             <NodeTemplate name="RealWorld-Application_Angular-w1" minInstances="1" maxInstances="1"
                           type="exampleNodeTypes:RealWorld-Application_Angular-w1" id="RealWorld-Application_Angular-w1"
                           winery:x="133" winery:y="124" xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes">
