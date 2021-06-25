@@ -19,7 +19,7 @@
   },
   "http://opentosca.org/example/applications/servicetemplates": {
     "namespace": "http://opentosca.org/example/applications/servicetemplates",
-    "prefix": "serviceTemplates",
+    "prefix": "exampleServiceTemplates",
     "readableName": "",
     "upstreamRepository": "",
     "secureCollection": false,
