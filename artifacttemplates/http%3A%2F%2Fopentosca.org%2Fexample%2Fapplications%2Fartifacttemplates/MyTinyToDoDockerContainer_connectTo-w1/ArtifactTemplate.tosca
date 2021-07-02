@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/artifacttemplates"
-             id="exampleArtifactTemplates-MyTinyToDoDockerContainer_IA-w1"
+             id="exampleArtifactTemplates-MyTinyToDoDockerContainer_connectTo-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
 >
-    <ArtifactTemplate type="ToscaBaseTypes:ScriptArtifact" id="MyTinyToDoDockerContainer_IA-w1"
+    <ArtifactTemplate type="ToscaBaseTypes:ScriptArtifact" id="MyTinyToDoDockerContainer_connectTo-w1"
                       xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
         <ArtifactReferences>
             <ArtifactReference
