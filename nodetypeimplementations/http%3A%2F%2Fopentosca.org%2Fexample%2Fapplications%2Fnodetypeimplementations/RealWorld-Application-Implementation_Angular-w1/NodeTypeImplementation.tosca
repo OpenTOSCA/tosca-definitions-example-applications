@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
-             id="exampleNodeTypeImplementations-RealWorld-Application-Impl_Angular-w1"
+             id="exampleNodeTypeImplementations-RealWorld-Application-Implementation_Angular-w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
 >
     <NodeTypeImplementation targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
-                            name="RealWorld-Application-Impl_Angular-w1" abstract="no" final="no"
+                            name="RealWorld-Application-Implementation_Angular-w1" abstract="no" final="no"
                             nodeType="exampleNodeTypes:RealWorld-Application_Angular-w1"
                             xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes">
         <ImplementationArtifacts>

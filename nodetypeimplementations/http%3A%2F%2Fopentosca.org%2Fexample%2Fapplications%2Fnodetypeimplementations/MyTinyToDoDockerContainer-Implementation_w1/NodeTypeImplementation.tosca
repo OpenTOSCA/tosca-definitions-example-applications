@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
-             id="exampleNodeTypeImplementations-MyTinyToDoDockerContainer_Impl"
+             id="exampleNodeTypeImplementations-MyTinyToDoDockerContainer-Implementation_w1"
              xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
 >
     <NodeTypeImplementation targetNamespace="http://opentosca.org/example/applications/nodetypeimplementations"
-                            name="MyTinyToDoDockerContainer_Impl" abstract="no" final="no"
-                            nodeType="exampleNodeTypes:MyTinyToDoDockerContainer"
+                            name="MyTinyToDoDockerContainer-Implementation_w1" abstract="no" final="no"
+                            nodeType="exampleNodeTypes:MyTinyToDoDockerContainer_w1"
                             xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes">
         <ImplementationArtifacts>
             <ImplementationArtifact name="MyTinyToDoDockerContainer_ConnectTo_IA"
                                     interfaceName="http://opentosca.org/interfaces/connections"
                                     operationName="connectTo" artifactType="ToscaBaseTypes:ScriptArtifact"
-                                    artifactRef="exampleArtifactTemplates:MyTinyToDoDockerContainer_IA-w1"
+                                    artifactRef="exampleArtifactTemplates:MyTinyToDoDockerContainer_connectTo-w1"
                                     xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates"
                                     xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"/>
         </ImplementationArtifacts>
