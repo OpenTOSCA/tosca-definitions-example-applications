@@ -10,9 +10,11 @@ Therefore, make sure that
   2. run `git lfs install` directly after cloning the repository inside the cloned folder, and
   3. run `git lfs pull` to download the binary files.
 
-⚠️ If the lfs-files are not downloaded, the repository, and thus the modeled applications, cannot run! Thus, ensure you run `git lfs pull`.
+⚠️ If the lfs-files are not downloaded, the repository, and thus the modeled applications, cannot run! 
+Thus, ensure you run `git lfs pull`.
 
-💡 To install git lfs gloabally, run `git lfs install --system`. This makes git lfs automatically available for all repositories and you do not have to run git lfs pull yourself.
+💡 To install git lfs globally, run `git lfs install --system`. 
+This makes git lfs automatically available for all repositories, and you do not have to run git lfs pull yourself.
 
 ## Haftungsausschluss
 
