@@ -3,7 +3,7 @@
     <ServiceTemplate name="PetClinic_MySQL-OpenStack-w1" targetNamespace="http://opentosca.org/example/applications/servicetemplates" id="PetClinic_MySQL-OpenStack-w1">
         <BoundaryDefinitions/>
         <TopologyTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="Web Application DB" minInstances="1" maxInstances="1" type="otntyIgeneral:MySQL-DB_w1" id="MySQL-DB" winery:location="undefined" winery:x="807" winery:y="98">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="Web Application DB" minInstances="1" maxInstances="1" type="nodeTypes:MySQL-DB_w1" id="MySQL-DB" winery:location="undefined" winery:x="807" winery:y="98">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <DBName>petclinic</DBName>
@@ -12,27 +12,27 @@
                     </Properties>
                 </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="schema" artifactType="otatyIgeneral:SQLArtifact" artifactRef="exampleArtifactTemplates:PetClinic_Schema-DA-w1"/>
+                    <DeploymentArtifact xmlns:artifactTypes="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="schema" artifactType="artifactTypes:SQLArtifact" artifactRef="exampleArtifactTemplates:PetClinic_Schema-DA-w1"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="otntyIgeneral:Tomcat_9-w1" id="Tomcat_9" winery:location="undefined" winery:x="552" winery:y="226">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="nodeTypes:Tomcat_9-w1" id="Tomcat_9" winery:location="undefined" winery:x="552" winery:y="226">
                 <Properties>
                     <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
                         <Port>8060</Port>
                     </properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="PetClinic" minInstances="1" maxInstances="1" type="otntyIgeneral:TomcatApplication_WAR-w1" id="PetClinic" winery:location="undefined" winery:x="476" winery:y="99">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="PetClinic" minInstances="1" maxInstances="1" type="nodeTypes:TomcatApplication_WAR-w1" id="PetClinic" winery:location="undefined" winery:x="476" winery:y="99">
                 <Properties>
                     <properties xmlns="http://www.example.org">
                         <context_path>root</context_path>
                     </properties>
                 </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="shop" artifactType="otatyIgeneral:WAR" artifactRef="exampleArtifactTemplates:PetClinic_DA-w1"/>
+                    <DeploymentArtifact xmlns:artifactTypes="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="shop" artifactType="artifactTypes:WAR" artifactRef="exampleArtifactTemplates:PetClinic_DA-w1"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="otntyIgeneral:OpenStack_22-Victoria-w1" id="OpenStack" winery:x="553" winery:y="613">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="nodeTypes:OpenStack_22-Victoria-w1" id="OpenStack" winery:x="553" winery:y="613">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <HypervisorEndpoint>https://idm02.bw-cloud.org:5000/v3</HypervisorEndpoint>
@@ -41,7 +41,7 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="Ubuntu-VM_18.04-w1" minInstances="1" maxInstances="1" type="otntyIgeneral:Ubuntu-VM_18.04-w1" id="Ubuntu-VM_18.04-w1" winery:x="553" winery:y="478">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="Ubuntu-VM_18.04-w1" minInstances="1" maxInstances="1" type="nodeTypes:Ubuntu-VM_18.04-w1" id="Ubuntu-VM_18.04-w1" winery:x="553" winery:y="478">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <VMIP/>
@@ -55,7 +55,7 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="otntyIgeneral:MySQL-DBMS_5.7-w1" id="MySQL-DBMS_5.7-w1" winery:x="765" winery:y="316">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="nodeTypes:MySQL-DBMS_5.7-w1" id="MySQL-DBMS_5.7-w1" winery:x="765" winery:y="316">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <DBMSUser>root</DBMSUser>
@@ -64,7 +64,7 @@
                     </Properties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="Java" minInstances="1" maxInstances="1" type="otntyIgeneral:Java_11-w1" id="Java_11-w1_0" winery:x="360" winery:y="324">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="Java" minInstances="1" maxInstances="1" type="nodeTypes:Java_11-w1" id="Java_11-w1_0" winery:x="360" winery:y="324">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <component_version/>
