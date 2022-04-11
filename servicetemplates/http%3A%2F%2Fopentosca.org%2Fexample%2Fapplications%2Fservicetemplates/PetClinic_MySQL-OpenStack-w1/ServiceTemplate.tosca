@@ -32,13 +32,12 @@
                     <DeploymentArtifact xmlns:artifactTypes="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="shop" artifactType="artifactTypes:WAR" artifactRef="exampleArtifactTemplates:PetClinic_DA-w1"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="nodeTypes:OpenStack_15-Train-w1" id="OpenStack" winery:x="553" winery:y="613">
+            <NodeTemplate xmlns:nodeTypes="http://opentosca.org/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="nodeTypes:OpenStack_22-Victoria-w1" id="OpenStack" winery:x="553" winery:y="613">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
-                        <HypervisorEndpoint>https://idm01.bw-cloud.org:5000/v3</HypervisorEndpoint>
-                        <HypervisorTenantID>get_input: OpenStackProjectId</HypervisorTenantID>
-                        <HypervisorUserName>get_input: OpenStackUser</HypervisorUserName>
-                        <HypervisorUserPassword>get_input: OpenStackUserPassword</HypervisorUserPassword>
+                        <HypervisorEndpoint>https://idm02.bw-cloud.org:5000/v3</HypervisorEndpoint>
+                        <HypervisorApplicationID>get_input: OpenStackApplicationID</HypervisorApplicationID>
+                        <HypervisorApplicationSecret>get_input: OpenStackApplicationSecret</HypervisorApplicationSecret>
                     </Properties>
                 </Properties>
             </NodeTemplate>
@@ -78,16 +77,17 @@
                 <TargetElement ref="Tomcat_9"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="con_183" type="ToscaBaseTypes:ConnectsTo" id="con_183">
+                <Properties>
+                    <properties xmlns="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes/propertiesdefinition/winery">
+                        <ChannelType/>
+                    </properties>
+                </Properties>
                 <SourceElement ref="PetClinic"/>
                 <TargetElement ref="MySQL-DB"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
                 <SourceElement ref="Tomcat_9"/>
                 <TargetElement ref="Ubuntu-VM_18.04-w1"/>
-            </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
-                <SourceElement ref="Ubuntu-VM_18.04-w1"/>
-                <TargetElement ref="OpenStack"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
                 <SourceElement ref="MySQL-DB"/>
@@ -104,6 +104,10 @@
             <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
                 <SourceElement ref="Java_11-w1_0"/>
                 <TargetElement ref="Ubuntu-VM_18.04-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="Ubuntu-VM_18.04-w1"/>
+                <TargetElement ref="OpenStack"/>
             </RelationshipTemplate>
         </TopologyTemplate>
     </ServiceTemplate>

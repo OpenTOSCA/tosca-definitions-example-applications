@@ -1,4 +1,4 @@
-# MyTinyToDo_MySql OpenStack [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# MyTinyToDo_MySql Docker [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 > Installs the PHP Application MyTinyToDo as a Docker Container which uses a MySQL database hosted on an Ubuntu Docker Container.
 

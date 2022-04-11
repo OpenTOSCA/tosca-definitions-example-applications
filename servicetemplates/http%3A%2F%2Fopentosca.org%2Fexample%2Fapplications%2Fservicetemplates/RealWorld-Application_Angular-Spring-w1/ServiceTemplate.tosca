@@ -77,13 +77,6 @@
                         <ex:AppName>RealWorldApplication-Angular</ex:AppName>
                     </ex:Properties>
                 </Properties>
-                <DeploymentArtifacts>
-                    <DeploymentArtifact name="RealWorldApplication-Angular"
-                                        artifactType="ToscaBaseTypes:ArchiveArtifact"
-                                        artifactRef="exampleArtifactTemplates:RealWorld-Application_Angular-Frontend-DA-w1"
-                                        xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates"
-                                        xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes"/>
-                </DeploymentArtifacts>
             </NodeTemplate>
             <RelationshipTemplate name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0"
                                   xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes">
