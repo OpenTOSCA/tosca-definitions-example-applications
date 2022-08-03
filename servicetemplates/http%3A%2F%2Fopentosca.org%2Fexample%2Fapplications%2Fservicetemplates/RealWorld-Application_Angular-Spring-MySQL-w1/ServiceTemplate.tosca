@@ -131,7 +131,7 @@
                 <SourceElement ref="MySQL-DB_w1_0"/>
                 <TargetElement ref="MySQL-DBMS_8.0-w1_0"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="DependsOn" type="ToscaBaseTypes:DependsOn" id="con_DependsOn_0">
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_6">
                 <SourceElement ref="MySQL-DBMS_8.0-w1_0"/>
                 <TargetElement ref="DockerContainer"/>
             </RelationshipTemplate>
