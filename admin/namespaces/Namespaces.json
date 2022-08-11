@@ -6,6 +6,7 @@
     "upstreamRepository": "",
     "secureCollection": false,
     "generatedNamespace": false,
+    "repositoryId" : "OpenTOSCA-Example-Applications",
     "patternCollection": false
   },
   "http://opentosca.org/example/applications/artifacttemplates": {
@@ -15,6 +16,7 @@
     "upstreamRepository": "",
     "secureCollection": false,
     "generatedNamespace": false,
+    "repositoryId" : "OpenTOSCA-Example-Applications",
     "patternCollection": false
   },
   "http://opentosca.org/example/applications/servicetemplates": {
@@ -24,6 +26,7 @@
     "upstreamRepository": "",
     "secureCollection": false,
     "generatedNamespace": false,
+    "repositoryId" : "OpenTOSCA-Example-Applications",
     "patternCollection": false
   },
   "http://opentosca.org/example/applications/nodetypeimplementations": {
@@ -33,6 +36,7 @@
     "upstreamRepository": "",
     "secureCollection": false,
     "generatedNamespace": false,
+    "repositoryId" : "OpenTOSCA-Example-Applications",
     "patternCollection": false
   }
 }
