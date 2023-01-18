@@ -1,42 +1,38 @@
 {
-  "http://opentosca.org/example/applications/nodetypes": {
-    "namespace": "http://opentosca.org/example/applications/nodetypes",
-    "prefix": "exampleNodeTypes",
-    "readableName": "",
-    "upstreamRepository": "",
-    "secureCollection": false,
-    "generatedNamespace": false,
+  "http://opentosca.org/example/applications/servicetemplates" : {
+    "namespace" : "http://opentosca.org/example/applications/servicetemplates",
+    "prefix" : "exampleServiceTemplates",
+    "readableName" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
     "repositoryId" : "OpenTOSCA-Example-Applications",
-    "patternCollection": false
+    "secureCollection" : false
   },
-  "http://opentosca.org/example/applications/artifacttemplates": {
-    "namespace": "http://opentosca.org/example/applications/artifacttemplates",
-    "prefix": "exampleArtifactTemplates",
-    "readableName": "",
-    "upstreamRepository": "",
-    "secureCollection": false,
-    "generatedNamespace": false,
+  "http://opentosca.org/example/applications/nodetypes" : {
+    "namespace" : "http://opentosca.org/example/applications/nodetypes",
+    "prefix" : "exampleNodeTypes",
+    "readableName" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
     "repositoryId" : "OpenTOSCA-Example-Applications",
-    "patternCollection": false
+    "secureCollection" : false
   },
-  "http://opentosca.org/example/applications/servicetemplates": {
-    "namespace": "http://opentosca.org/example/applications/servicetemplates",
-    "prefix": "exampleServiceTemplates",
-    "readableName": "",
-    "upstreamRepository": "",
-    "secureCollection": false,
-    "generatedNamespace": false,
+  "http://opentosca.org/example/applications/artifacttemplates" : {
+    "namespace" : "http://opentosca.org/example/applications/artifacttemplates",
+    "prefix" : "exampleArtifactTemplates",
+    "readableName" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
     "repositoryId" : "OpenTOSCA-Example-Applications",
-    "patternCollection": false
+    "secureCollection" : false
   },
-  "http://opentosca.org/example/applications/nodetypeimplementations": {
-    "namespace": "http://opentosca.org/example/applications/nodetypeimplementations",
-    "prefix": "exampleNodeTypeImplementations",
-    "readableName": "",
-    "upstreamRepository": "",
-    "secureCollection": false,
-    "generatedNamespace": false,
+  "http://opentosca.org/example/applications/nodetypeimplementations" : {
+    "namespace" : "http://opentosca.org/example/applications/nodetypeimplementations",
+    "prefix" : "exampleNodeTypeImplementations",
+    "readableName" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
     "repositoryId" : "OpenTOSCA-Example-Applications",
-    "patternCollection": false
+    "secureCollection" : false
   }
 }
