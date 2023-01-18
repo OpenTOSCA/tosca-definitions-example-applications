@@ -6,6 +6,7 @@
             <Interface name="connectToDB">
                 <Operation name="connectTo">
                     <InputParameters>
+                        <InputParameter name="IP" type="string" required="yes"/>
                         <InputParameter name="DBName" type="string" required="yes"/>
                         <InputParameter name="DBUser" type="string" required="yes"/>
                         <InputParameter name="DBPassword" type="string" required="yes"/>
