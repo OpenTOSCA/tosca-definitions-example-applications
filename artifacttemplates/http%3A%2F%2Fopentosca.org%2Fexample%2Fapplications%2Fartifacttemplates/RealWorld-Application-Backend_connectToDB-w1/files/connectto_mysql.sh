@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "VMIP: "$VMIP
+echo "IP: "$IP
 echo "DBName: "$DBName
 echo "DBMSPort: "$DBMSPort
 echo "DBUser: "$DBUser
@@ -10,7 +10,7 @@ echo "AppName: "$AppName
 cd /var/www/java/${AppName}
 
 # https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-echo "spring.datasource.url=jdbc:mysql://${VMIP:-localhost}:${DBMSPort:-3306}/$DBName
+echo "spring.datasource.url=jdbc:mysql://${IP:-localhost}:${DBMSPort:-3306}/$DBName
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=$DBUser
 spring.datasource.password=$DBPassword
