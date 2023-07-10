@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns0="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/example/applications/servicetemplates" id="exampleServiceTemplates-MyTinyToDo-MySql_Docker-w2">
+    <ServiceTemplate name="MyTinyToDo-MySql_Docker-w2" targetNamespace="http://opentosca.org/example/applications/servicetemplates" id="MyTinyToDo-MySql_Docker-w2">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerEngine" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine_w1" id="DockerEngine" ns0:location="undefined" ns0:x="384" ns0:y="528">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <DockerEngineURL>get_input: dockerUrl</DockerEngineURL>
+                        <DockerEngineCertificate/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:exampleNodeTypes="http://opentosca.org/example/applications/nodetypes" name="MyTinyToDoDockerContainer" minInstances="1" maxInstances="1" type="exampleNodeTypes:MyTinyToDoDockerContainer_w1" id="MyTinyToDoDockerContainer" ns0:location="undefined" ns0:x="241" ns0:y="134">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <ContainerPort>80</ContainerPort>
+                        <Port>get_input: UI_Port</Port>
+                        <ContainerID/>
+                        <ContainerIP/>
+                    </Properties>
+                </Properties>
+                <DeploymentArtifacts>
+                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="MyTinyToDoDockerContainer_DA" artifactType="otatyIgeneral:DockerContainerArtifact" artifactRef="exampleArtifactTemplates:MyTinyToDo_DA-w2"/>
+                </DeploymentArtifacts>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="otntyIgeneral:MySQL-DBMS_5.7-w1" id="MySQL-DBMS_5.7-w1" ns0:x="570" ns0:y="271">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <DBMSUser>root</DBMSUser>
+                        <DBMSPassword>get_input: DBMSPassword</DBMSPassword>
+                        <DBMSPort>3306</DBMSPort>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="MySQL-DB" minInstances="1" maxInstances="1" type="otntyIgeneral:MySQL-DB_w1" id="MySQL-DB" ns0:location="undefined" ns0:x="569" ns0:y="132">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <DBName>todo</DBName>
+                        <DBUser>get_input: DBUser</DBUser>
+                        <DBPassword>get_input: DBPassword</DBPassword>
+                    </Properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/management/features/policytypes" name="statefulAnnotation" policyType="otptyIgeneral:StatefulComponent"/>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/management/features/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+                <DeploymentArtifacts>
+                    <DeploymentArtifact xmlns:otatyIgeneral="http://opentosca.org/artifacttypes" xmlns:exampleArtifactTemplates="http://opentosca.org/example/applications/artifacttemplates" name="MyTinyToDo_DB_DA" artifactType="otatyIgeneral:SQLArtifact" artifactRef="exampleArtifactTemplates:MyTinyToDo_DB-DA-w1"/>
+                </DeploymentArtifacts>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/nodetypes" name="DockerContainer" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerContainer_w1" id="DockerContainer" ns0:x="569" ns0:y="401">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <Port>3306</Port>
+                        <ContainerPort>3306</ContainerPort>
+                        <ContainerID/>
+                        <ContainerIP/>
+                        <ImageID>ubuntu:18.04</ImageID>
+                        <ContainerMountPath/>
+                        <HostMountFiles/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="con_76" type="ToscaBaseTypes:HostedOn" id="con_76">
+                <SourceElement ref="MyTinyToDoDockerContainer"/>
+                <TargetElement ref="DockerEngine"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
+                <SourceElement ref="MyTinyToDoDockerContainer"/>
+                <TargetElement ref="MySQL-DB"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="MySQL-DB"/>
+                <TargetElement ref="MySQL-DBMS_5.7-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="DockerContainer"/>
+                <TargetElement ref="DockerEngine"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="MySQL-DBMS_5.7-w1"/>
+                <TargetElement ref="DockerContainer"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
