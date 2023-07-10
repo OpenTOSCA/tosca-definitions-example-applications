@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<selfservice:Application xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice">
-    <selfservice:displayName>MyTinyToDo and MySQL on Docker</selfservice:displayName>
-    <selfservice:version>1.0</selfservice:version>
-    <selfservice:authors>Winery</selfservice:authors>
-    <selfservice:description>Installs the PHP Application MyTinyToDo as a Docker Container on a Docker Engine which connects to an Ubuntu Docker Container running a MySQL database.</selfservice:description>
-    <selfservice:iconUrl>icon.jpg</selfservice:iconUrl>
-    <selfservice:imageUrl>image.jpg</selfservice:imageUrl>
-</selfservice:Application>
